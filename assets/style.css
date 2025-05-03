@@ -59,12 +59,30 @@
   height: 100%;
   gap: 1rem;
 }
+.menu-list li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: #bdf;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.item-count {
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 300;
+  white-space: nowrap;
+}
 .menu-list a {
+  display: flex;
+  justify-content: ;
+  align-items: flex-start;
   text-decoration: none;
   color: inherit;
-  padding: 10px;
-  font-weight: bold;
 }
+
 .menu-list i,
 .header ul i {
   margin-left: 0.5rem;
