@@ -1,0 +1,176 @@
+.container {
+  font-family: "Poppins", "Courier New", Courier, monospace;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 10px;
+  grid-template-areas:
+    "header header header header header"
+    "menu main main main main"
+    "menu main main main main"
+    "menu main main main main"
+    "menu main main main main"
+    "menu main main main main"
+    "footer footer footer footer footer";
+  height: 100vh;
+  padding: 10px;
+}
+
+/* Asignación de las áreas */
+.header {
+  grid-area: header;
+  background: #ddbb99;
+  color: brown;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.header ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.header ul a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu {
+  grid-area: menu;
+  background: #bdf;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+}
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+}
+.menu-list a {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+  font-weight: bold;
+}
+.menu-list i,
+.header ul i {
+  margin-left: 0.5rem;
+}
+.header ul i {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+/*Grilla "main" anidada dentro de grilla "container"*/
+.main {
+  grid-area: main;
+  background: #def;
+  overflow:auto;
+}
+/* Estas dos áreas corresponden a las áreas dentro de la grilla "main" */
+.gallery {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  justify-items: center;
+  align-items: stretch;
+  width: 95%;
+  overflow-x: hidden; 
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 100%;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.product-info {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.product-desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.product-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: auto;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #222;
+}
+
+.buy-button {
+  padding: 1rem;
+  padding-top: 1,5rem;
+  background: linear-gradient(135deg, #007bff, #00b4ff);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.buy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, #0056b3, #0094cc);
+}
+
+
+.footer {
+  grid-area: footer;
+  background: #9cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
