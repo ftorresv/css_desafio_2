@@ -77,7 +77,6 @@
 }
 .menu-list a {
   display: flex;
-  justify-content: ;
   align-items: flex-start;
   text-decoration: none;
   color: inherit;
